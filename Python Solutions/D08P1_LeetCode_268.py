@@ -2,12 +2,7 @@
 #return the only number in the range that is missing from the array.
 
 class Solution:
-  def missingNumber(self, nums: List[int]) -> int:
-      real_sum = 0
-      missing_sum = 0
-      
-      for i, num in enumerate(nums): 
-          real_sum += i + 1
-          missing_sum += num
-      
-      return real_sum - missing_sum
+    def missingNumber(self, nums: List[int]) -> int:
+        for i in range(0,len(nums)+1):
+            if i not in nums:
+                return i
