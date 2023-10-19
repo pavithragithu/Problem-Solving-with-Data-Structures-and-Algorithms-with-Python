@@ -1,5 +1,6 @@
 # Python3 code coming soon
 class Solution:
+    
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         ans=[]
         for i in nums:
