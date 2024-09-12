@@ -1,9 +1,6 @@
-from typing import List
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        sum = 0
-        run_sum = []
-        for i in range(len(nums)):
-            sum += nums[i]
-            run_sum.append(sum)
-        return run_sum
+        ans=[0]*len(nums)
+        for i in range(0,len(nums)):
+            ans[i]=ans[i-1]+nums[i]
+        return ans
